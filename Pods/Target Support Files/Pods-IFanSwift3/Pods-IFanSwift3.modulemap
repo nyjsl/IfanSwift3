@@ -1,0 +1,6 @@
+framework module Pods_IFanSwift3 {
+  umbrella header "Pods-IFanSwift3-umbrella.h"
+
+  export *
+  module * { export * }
+}

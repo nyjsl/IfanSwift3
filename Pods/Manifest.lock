@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (4.0.1)
+  - MonkeyKing (1.0.0)
+  - Moya (8.0.0-beta.3):
+    - Moya/Core (= 8.0.0-beta.3)
+  - Moya/Core (8.0.0-beta.3):
+    - Alamofire (~> 4.0.0)
+    - Result
+  - Result (3.0.0)
+  - SnapKit (3.0.2)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0.1)
+  - MonkeyKing (~> 1.0.0)
+  - Moya (~> 8.0.0-beta.3)
+  - SnapKit (~> 3.0.2)
+  - YYWebImage (~> 1.0.5)
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  MonkeyKing: 8d1f0550cc535d5a6f97f4ebcec068d95c9ba00f
+  Moya: f83c7f81eaa28cb0151549dfcf1f3fda4440bb50
+  Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
+
+PODFILE CHECKSUM: f8699f484a09782def0632138bfb17bbcca483ef
+
+COCOAPODS: 1.1.1
