@@ -1,2 +1,2 @@
 # IfanSwift3
-ifanr swift 3.0 learing
+ifanr swift 3.0 learning
