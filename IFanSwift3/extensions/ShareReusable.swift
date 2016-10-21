@@ -20,7 +20,8 @@ public protocol ShareReusable: ShareViewDelegate{
 extension ShareReusable where Self: UIViewController{
     
     func hideShareView(){
-        UIView.animateWithDuration(0.3, animations: { 
+        
+        UIView.animate(withDuration: 0.3, animations: {
             self.shadowView?.alpha = 0
             self.shareView?.center.y += 170
             }) { (result) in
@@ -29,6 +30,7 @@ extension ShareReusable where Self: UIViewController{
                     self.shareView?.removeFromSuperview()
                 }
         }
+        
     }
     
     func showShareView(){
@@ -39,16 +41,17 @@ extension ShareReusable where Self: UIViewController{
         
         self.shadowView = UIView(frame: self.view.frame)
         self.shadowView?.alpha = 0
-        self.shadowView?.backgroundColor = UIColor.blackColor()
+        self.shadowView?.backgroundColor = UIColor.black
         
-        let window: UIWindow = UIApplication.sharedApplication().keyWindow!
+        let window: UIWindow = UIApplication.shared.keyWindow!
         window.addSubview(shareView!)
         window.addSubview(shadowView!)
         
-        UIView.animateWithDuration(0.3, animations: { 
+        UIView.animate(withDuration: 0.3) { 
             self.shadowView?.alpha = 0.5
             self.shareView?.center.y -= 170
-        })
+
+        }
         
     }
     

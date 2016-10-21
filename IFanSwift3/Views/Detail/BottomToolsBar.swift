@@ -77,8 +77,8 @@ class BottomToolsBar: UIView{
     lazy var praizeButton:UIButton = {
         let frame = CGRect(x: UIConstant.SCREEN_WIDTH-155, y: 12.5, width: 50, height: 30)
         let button: UIButton = UIButton(frame: frame)
-        button.setImage(UIImage(imageLiteral: "ic_comment_bar_like_false"), for: UIControlState())
-        button.setImage((UIImage(imageLiteral: "ic_comment_bar_like_true")), for: .selected)
+        button.setImage(UIImage(imageLiteralResourceName: "ic_comment_bar_like_false"), for: UIControlState())
+        button.setImage((UIImage(imageLiteralResourceName: "ic_comment_bar_like_true")), for: .selected)
         button.setTitle("点赞(11)", for: UIControlState())
         button.setTitleColor(UIColor.gray, for: UIControlState())
         button.titleLabel?.font = UIFont.customFont_FZLTXIHJW(fontSize: 9)
@@ -92,7 +92,7 @@ class BottomToolsBar: UIView{
     /// 分享 button
     lazy var shareButton: UIButton = {
         let shareButton: UIButton = UIButton(frame: CGRect(x: UIConstant.SCREEN_WIDTH-95, y: 12.5, width: 30, height: 30))
-        shareButton.setImage(UIImage(imageLiteral: "ic_comment_bar_share"), for: UIControlState())
+        shareButton.setImage(UIImage(imageLiteralResourceName: "ic_comment_bar_share"), for: UIControlState())
         shareButton.setTitle("分享", for: UIControlState())
         shareButton.setTitleColor(UIColor.gray, for: UIControlState())
         shareButton.imageView?.contentMode = .scaleAspectFit
@@ -105,7 +105,7 @@ class BottomToolsBar: UIView{
     /// 评论 button
     internal lazy var commentButton: UIButton = {
         let commentButton: UIButton = UIButton(frame: CGRect(x: UIConstant.SCREEN_WIDTH-45, y: 12.5, width: 30, height: 30))
-        commentButton.setImage(UIImage(imageLiteral: "ic_comment"), for: UIControlState())
+        commentButton.setImage(UIImage(imageLiteralResourceName: "ic_comment"), for: UIControlState())
         commentButton.setTitle("评论", for: UIControlState())
         commentButton.setTitleColor(UIColor.gray, for: UIControlState())
         commentButton.titleLabel?.font  = UIFont.customFont_FZLTXIHJW(fontSize: 9)

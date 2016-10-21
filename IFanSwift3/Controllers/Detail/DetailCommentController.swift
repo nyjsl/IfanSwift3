@@ -52,7 +52,7 @@ class DetailCommentController: UIViewController{
     fileprivate func getData(){
         
         let type: CommentModel? = CommentModel(dict: [:])
-        IFanService.shareInstance.getData(APIConstant.Comments_latest(self.id), t: type, keys: ["data", "all"], successHandle: { (modelArray) in
+        IFanService.shareInstance.getData(APIConstant.comments_latest(self.id), t: type, keys: ["data", "all"], successHandle: { (modelArray) in
             modelArray.forEach({ (model) in
                 self.detailsCommentModelArray.append(model)
             })
@@ -63,13 +63,13 @@ class DetailCommentController: UIViewController{
     }
     
     fileprivate func setupLayout(){
-        self.headerView.snp_makeConstraints { (make) in
+        self.headerView.snp.makeConstraints { (make) in
             make.left.top.right.equalTo(self.view)
             make.height.equalTo(84)
         }
-        self.tableView.snp_makeConstraints { (make) in
+        self.tableView.snp.makeConstraints { (make) in
             make.left.bottom.right.equalTo(self.view)
-            make.top.equalTo(self.headerView.snp_bottom)
+            make.top.equalTo(self.headerView.snp.bottom)
         }
     }
     
@@ -102,7 +102,7 @@ extension DetailCommentController:CommentHeaderDelegate{
     }
     
     func gobackBtnDidClick() {
-        self.navigationController?.popViewController(animated: true)
+        let _ = self.navigationController?.popViewController(animated: true)
     }
     
     func timeSortedBtnDidClick(_ sender: UIButton) {

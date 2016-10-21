@@ -36,19 +36,19 @@ class HeaderBackView: UIView{
     }
     
     fileprivate func setUpLayout(){
-        blurView.snp_makeConstraints { (make) in
+        blurView.snp.makeConstraints { (make) in
             make.edges.equalTo(self)
         }
         
-        backButton.snp_makeConstraints { (make) in
+        backButton.snp.makeConstraints { (make) in
             make.left.equalTo(self).offset(15)
             make.centerY.equalTo(self)
             make.width.equalTo(20)
             make.height.equalTo(15)
         }
         
-        titleLabel.snp_makeConstraints { (make) in
-            make.left.equalTo(self.backButton.snp_right)
+        titleLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(self.backButton.snp.right)
             make.centerY.equalTo(self)
             make.height.equalTo(40)
             make.width.equalTo(100)
@@ -65,7 +65,7 @@ class HeaderBackView: UIView{
     
     fileprivate lazy var backButton: UIButton = {
         let button: UIButton = UIButton()
-        button.setImage(UIImage(imageLiteral: "ic_article_back"), for: UIControlState())
+        button.setImage(UIImage(imageLiteralResourceName: "ic_article_back"), for: UIControlState())
         button.imageView?.contentMode = .scaleAspectFit
         button.addTarget(self, action: #selector(goBack), for: .touchUpInside)
         return button

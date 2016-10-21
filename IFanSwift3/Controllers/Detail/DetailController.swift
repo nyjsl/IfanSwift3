@@ -28,14 +28,14 @@ class DetailController: UIViewController {
     }
     
     fileprivate func setupLayout(){
-        self.wkWebView.snp_makeConstraints { (make) in
+        self.wkWebView.snp.makeConstraints { (make) in
             make.left.right.top.bottom.equalTo(self.view)
         }
-        self.toolBar.snp_makeConstraints { (make) in
+        self.toolBar.snp.makeConstraints { (make) in
             make.left.right.bottom.equalTo(self.view)
             make.height.equalTo(50)
         }
-        self.headerBack.snp_makeConstraints { (make) in
+        self.headerBack.snp.makeConstraints { (make) in
             make.left.right.equalTo(self.view)
             self.headerTopConstranit = make.top.equalTo(self.view).constraint
             make.height.equalTo(50)
@@ -104,7 +104,7 @@ extension DetailController: ShareViewDelegate,ShareReusable{
 
 extension DetailController: HeaderViewDelegate{
     func backButtonDidClick() {
-        self.navigationController?.popViewController(animated: true)
+        let _ = self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -146,13 +146,13 @@ extension DetailController: WKNavigationDelegate,UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentPositon = scrollView.contentOffset.y
         if currentPositon - self.lastPosition > 30  && currentPositon>0{
-            self.headerTopConstranit?.updateOffset(50)
+            self.headerTopConstranit?.update(offset: 50)
             UIView.animate(withDuration: 0.3, animations: {
                 self.headerBack.layoutIfNeeded()
             })
             self.lastPosition = currentPositon
         }else if self.lastPosition - currentPositon > 10{
-            self.headerTopConstranit?.updateOffset(0)
+           self.headerTopConstranit?.update(offset: 0)
             UIView.animate(withDuration: 0.3, animations: {
                 self.headerBack.layoutIfNeeded()
             })

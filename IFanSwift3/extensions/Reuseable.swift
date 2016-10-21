@@ -15,7 +15,7 @@ public protocol Reuseable: class{
 }
 extension Reuseable{
     static var reuseIdentifier: String{
-        return String(describing: Self)
+        return String(describing: self)
     }
 }
 

@@ -18,6 +18,7 @@ class MainViewController: UIViewController{
         UIApplication.shared.setStatusBarHidden(true, with: .none)
         setUpRootViewControllers()
         
+        
         self.view.addSubview(menuController.view)
         self.view.addSubview(self.scrollView)
         self.view.addSubview(self.mainHeaderView)
@@ -27,14 +28,16 @@ class MainViewController: UIViewController{
         
         setupBtnConstraints()
     }
+        
     
     fileprivate func setupBtnConstraints(){
-        self.menuButton.snp_makeConstraints { (make) in
+        self.menuButton.snp.makeConstraints { (make) in
             make.right.equalTo(-15)
             make.top.equalTo(35)
             make.width.height.equalTo(45)
         }
-        self.classifyButton.snp_makeConstraints { (make) in
+        
+        self.classifyButton.snp.makeConstraints { (make) in
             make.left.equalTo(15)
             make.top.equalTo(35)
             make.width.height.equalTo(45)
@@ -56,7 +59,7 @@ class MainViewController: UIViewController{
     
     fileprivate lazy var classifyButton: UIButton = {
         let button = UIButton()
-        let img = UIImage(imageLiteral: "ic_circle")
+        let img = UIImage(imageLiteralResourceName: "ic_circle")
         button.setImage(img, for: UIControlState())
         button.addTarget(self, action: #selector(MainViewController.classifyBtnClicked), for: .touchUpInside)
         return button
@@ -68,7 +71,7 @@ class MainViewController: UIViewController{
     */
     fileprivate lazy var menuButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(imageLiteral:"ic_hamburg"), for: UIControlState())
+        button.setImage(UIImage(imageLiteralResourceName:"ic_hamburg"), for: UIControlState())
         button.addTarget(self, action: #selector(MainViewController.menuBtnClicked(_:)), for: .touchUpInside)
         return button
     }()

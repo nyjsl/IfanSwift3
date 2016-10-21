@@ -93,9 +93,9 @@ extension ScrollViewControllerReusable where Self: UIViewController{
     
     func setUpPullToRefreshView(){
         if pullToRefreshView == nil{
-            pullToRefreshView = PullToRefreshView(coder: CGRect(x: CGFloat(0), y: -scenceHeight, width: self.view.width, height: scenceHeight))
+            pullToRefreshView = PullToRefreshView(frame: CGRect(x: CGFloat(0), y: -scenceHeight, width: self.view.width, height: scenceHeight))
             pullToRefreshView.dataSource = self
-            self.tablView.insertSubview(pullToRefreshView, atIndex: 0)
+            self.tablView.insertSubview(pullToRefreshView, at: 0)
             
         }
     }

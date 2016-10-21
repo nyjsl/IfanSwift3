@@ -34,14 +34,14 @@ class CategoryController: UIViewController {
     }
     
     fileprivate func setupLayout(){
-        self.backBtn.snp_makeConstraints { (make) in
+        self.backBtn.snp.makeConstraints { (make) in
             make.left.equalTo(self.view)
             make.top.equalTo(self.view).offset(UIConstant.UI_MARGIN_20)
             make.size.equalTo(CGSize(width: 50, height: 50))
         }
-        self.titleLabel.snp_makeConstraints { (make) in
+        self.titleLabel.snp.makeConstraints { (make) in
             make.left.right.equalTo(self.view)
-            make.centerY.equalTo(backBtn.snp_centerY)
+            make.centerY.equalTo(backBtn.snp.centerY)
             make.height.equalTo(20)
         }
     }
@@ -117,7 +117,7 @@ extension CategoryController{
     
     fileprivate func getData(_ page: Int=1){
         isRefreshing = true
-        IFanService.shareInstance.getLatestLayout(APIConstant.Category(categoryModel.type!, page), successHandle: { [weak self] (layoutArray) in
+        IFanService.shareInstance.getLatestLayout(APIConstant.category(categoryModel.type!, page), successHandle: { [weak self] (layoutArray) in
             guard self != nil else{
                 return
             }
@@ -142,7 +142,7 @@ extension CategoryController{
 
 extension CategoryController{
     @objc fileprivate func backBtnDidClick(){
-        self.navigationController?.popViewController(animated: true)
+        let _ = self.navigationController?.popViewController(animated: true)
     }
 }
 

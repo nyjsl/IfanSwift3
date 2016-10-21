@@ -49,12 +49,15 @@ extension Date{
         }else if timeIntervalHour<72{
             resultStr = "前天 \(getStrByRange(dateStr,start: 11,end: 17))"
         }else{
-            if let array: Array = dateStr.components(separatedBy: " "){
-                if let monthDayArray: Array = array[0].components(separatedBy: "-"){
-                    resultStr = monthDayArray[1]+"月"+monthDayArray[2]+"日"
-                }
+            let array: Array = dateStr.components(separatedBy: " ")
+            
+            if(array.count>0){
+                let monthDayArray: Array = array[0].components(separatedBy: "-")
+                resultStr = monthDayArray[1]+"月"+monthDayArray[2]+"日"
                 resultStr += getStrByRange(array[1], start: 0, end: 5)
             }
+            
+            
             
         }
         return resultStr

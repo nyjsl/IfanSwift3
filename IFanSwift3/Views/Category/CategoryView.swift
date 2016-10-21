@@ -112,7 +112,6 @@ extension CategoryView: UICollectionViewDataSource,UICollectionViewDelegate{
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        indexPath
         
         let headerView = collectionView.dequeReuseable(UICollectionElementKindSectionHeader, forIndexPath: indexPath) as CategoryHeaderView
         return headerView

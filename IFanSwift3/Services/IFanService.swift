@@ -13,8 +13,7 @@ import Moya
 class IFanService{
     
     static let shareInstance = IFanService()
-    
-    lazy var ifanProvider = MoyaProvider<APIConstant>()
+    lazy var ifanProvider: MoyaProvider<APIConstant> = MoyaProvider<APIConstant>()
     
     fileprivate init(){}
     
@@ -22,33 +21,36 @@ class IFanService{
     /*
      获取首页列表数据
     */
-        func getLatestLayout(_ target: APIConstant,successHandle: ((Array<HomePopbarLayout>) -> Void)?,errorHandle:((Error) -> Void)?){
+        func getLatestLayout(_ target: APIConstant,successHandle: ((Array<HomePopbarLayout>) -> Void)?,errorHandle:((Swift.Error) -> Void)?){
         
         ifanProvider.request(target) { (result) in
             switch result{
-            case let .Success(response):
+            case let .success(response):
                 do {
                     let json = try response.mapJSON() as? Dictionary<String,AnyObject>
                     if let json = json{
                         if let content = json["data"] as? Array<AnyObject>{
-                            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { 
+                            
+                            DispatchQueue.global().async(execute: { 
                                 let layoutArray = content.map({ (dict) -> HomePopbarLayout in
                                     return HomePopbarLayout(model: CommonModel(dict: dict as! NSDictionary))
                                 })
                                 
-                                dispatch_async(dispatch_get_main_queue(), { 
+                                DispatchQueue.main.async(execute: { 
                                     if let success = successHandle{
                                         success(layoutArray)
                                     }
                                 })
+                                
                             })
+                            
                         }
                     }
                     
                 }catch{
                    print("出现异常")
                 }
-            case let .Failure(error):
+            case let .failure(error):
                 if let handle = errorHandle{
                     handle(error)
                 }
@@ -58,26 +60,28 @@ class IFanService{
     
     
     
-    func getData<T:Initable>(_ target: APIConstant,t: T?,keys:Array<String>,successHandle: ((Array<T>) -> Void)? ,errorHandle: ((Error) -> Void)?){
+    func getData<T:Initable>(_ target: APIConstant,t: T?,keys:Array<String>,successHandle: ((Array<T>) -> Void)? ,errorHandle: ((Swift.Error) -> Void)?){
         
         ifanProvider.request(target) { (result) in
             switch result{
-            case let .Success(response):
+            case let .success(response):
                 do{
                     let json = try response.mapJSON() as? Dictionary<String,AnyObject>
                     if let json = json{
                         if keys.count == 1{ //获取data数组
                             if let content = json[keys[0]] as? Array<AnyObject>{
-                                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { 
+                                
+                                DispatchQueue.global().async {
                                     let modelArray = content.map({ (dict) -> T in
                                         return T(dict: dict as!NSDictionary)
                                     })
-                                    dispatch_async(dispatch_get_main_queue(), { 
+                                    DispatchQueue.main.async {
                                         if let success = successHandle{
                                             success(modelArray)
                                         }
-                                    })
-                                })
+                                    }
+                                }
+                                
                             }else{
                                 print("没有数据")
                             }
@@ -85,17 +89,19 @@ class IFanService{
                         }else if keys.count == 2{
                             if let content = json[keys[0]] as? Dictionary<String,AnyObject>{
                                 if let alls = content[keys[1]] as? Array<AnyObject>{
-                                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { 
+                                    
+                                    DispatchQueue.global().async {
                                         let  allsArray = alls.map({ (dict) -> T in
                                             return T(dict: dict as! NSDictionary)
                                         })
                                         
-                                        dispatch_async(dispatch_get_main_queue(), { 
+                                        DispatchQueue.main.async {
                                             if let success = successHandle{
                                                 success(allsArray)
                                             }
-                                        })
-                                    })
+                                        }
+                                    }
+                                    
                                 }
                             }else{
                                 print("没有数据")
@@ -108,7 +114,7 @@ class IFanService{
                     print("出现异常")
                 }
                 
-            case let .Failure(error):
+            case let .failure(error):
                 if let handle = errorHandle{
                     handle(error)
                 }

@@ -129,7 +129,7 @@ public enum CategoryName {
         case .picture:
             return "tuji"
         case .list:
-            return "%E6%B8%85%E5%8D%95".stringByRemovingPercentEncoding!
+            return "%E6%B8%85%E5%8D%95".removingPercentEncoding!
         }
     }
 }
@@ -158,7 +158,7 @@ extension APIConstant: TargetType{
     fileprivate var post_type: String{
         switch self {
         case .home_hot_features(_),.home_latest(_):
-            return "post%2Cnews%2Cdasheng%2Cdata".stringByRemovingPercentEncoding!
+            return "post%2Cnews%2Cdasheng%2Cdata".removingPercentEncoding!
         case .newsFlash_latest(_):
             return "buzz"
         case .playingZhi_latest(_):
@@ -213,9 +213,10 @@ extension APIConstant: TargetType{
         }
     }
     public var method: Moya.Method {
-        return .GET
+        return Moya.Method.get
+        
     }
-    public var parameters: [String: AnyObject]? {
+    public var parameters: [String: Any]? {
         switch self {
         //首页热门
         case let .home_hot_features(page):
@@ -232,9 +233,9 @@ extension APIConstant: TargetType{
         case let .appSo_latest(page):
             return getParameters(page)
         case let .mindStore_latest(page):
-            return ["look_back_days":page as AnyObject,"limit":60 as AnyObject]
+            return ["look_back_days":page as Any,"limit":60 as Any]
         case let .comments_latest(id):
-            return ["action":action as AnyObject, "appKey": appKey as AnyObject, "post_id":id as AnyObject ,"sign": sign as AnyObject, "timestamp": timeStamp as AnyObject]
+            return ["action":action as Any, "appKey": appKey as Any, "post_id":id as Any ,"sign": sign as Any, "timestamp": timeStamp as Any]
         case let .category(type, page):
             if type == CategoryName.daSheng || type == CategoryName.shudu || type == CategoryName.picture{
                 return getParameters(page)
@@ -242,18 +243,18 @@ extension APIConstant: TargetType{
                 return getParamatersIncludeCategotyType(page, type: type.getName())
             }
         case let .mindStore_Detail_Comments(id, offset):
-            return ["mind": id as AnyObject, "limit": 12 as AnyObject, "offset": offset as AnyObject]
+            return ["mind": id as Any, "limit": 12 as Any, "offset": offset as Any]
         default:
             return nil
         }
     }
     
-    fileprivate func getParameters(_ page: Int) -> [String:AnyObject]?{
+    fileprivate func getParameters(_ page: Int) -> [String:Any]?{
         return ["action":action as AnyObject,"appkey":appKey as AnyObject,"excerpt_length":excerpt_length as AnyObject,"sign":sign as AnyObject,"timestamp":timeStamp as AnyObject,
-            "page":page as AnyObject,"posts_per_page":posts_per_page as AnyObject,"post_type":post_type]
+            "page":page as AnyObject,"posts_per_page":posts_per_page as AnyObject,"post_type":post_type as AnyObject]
     }
     
-    fileprivate func getParamatersIncludeCategotyType(_ page: Int,type: String) -> [String:AnyObject]?{
+    fileprivate func getParamatersIncludeCategotyType(_ page: Int,type: String) -> [String:Any]?{
         if var dict = getParameters(page){
             dict["category_name"] = type as AnyObject?
             return dict
@@ -267,6 +268,10 @@ extension APIConstant: TargetType{
     
     public var multipartBody: [MultipartFormData]? {
         return nil
+    }
+    
+    public var task: Task{
+        return .request
     }
 }
 

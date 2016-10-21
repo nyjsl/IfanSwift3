@@ -61,7 +61,7 @@ class PullToRefreshView: UIView{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.blackColor()
+        self.backgroundColor = UIColor.black
         self.addSubview(statusLabel)
         self.addSubview(activityView)
     }
@@ -132,9 +132,11 @@ class PullToRefreshView: UIView{
                 self.statusLabel.text = "下拉即可刷新"
                 if oldState == RefreshState.refreshing{
                     self.activityView.isHidden = true
-                    self.readLine.hidden = true
-                    UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
-                        self.scrollView.contentInset = UIEdgeInsetsZero
+                    self.readLine.isHidden = true
+                    
+                   
+                    UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions.curveLinear, animations: {
+                        self.scrollView.contentInset = UIEdgeInsets.zero
                         }, completion: { (_) in
                             self.setupNormalDataAnimation()
                     })
@@ -144,12 +146,12 @@ class PullToRefreshView: UIView{
             case .pulling:
                 self.statusLabel.text = "释放即可刷新"
             case .refreshing:
-                self.readLine.hidden = true
+                self.readLine.isHidden = true
                 self.activityView.isHidden = false
                 self.activityView.startAnimation()
                 if let delegate = self.delegate{
                     delegate.pullToRefreshViewWillRefresh?(self)
-                    UIView.animateWithDuration(0.2, animations: { 
+                    UIView.animate(withDuration: 0.2, animations: {
                         
                         let top: CGFloat = happenOffsetY
                         var inset: UIEdgeInsets = self.scrollView.contentInset
@@ -170,16 +172,16 @@ class PullToRefreshView: UIView{
     fileprivate lazy var statusLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.customFont_FZLTXIHJW(fontSize: 10)
-        label.textColor = UIColor.whiteColor()
+        label.textColor = UIColor.white
         label.text = "下拉即可刷新"
-        label.backgroundColor = UIColor.clearColor()
-        label.textAlignment = NSTextAlignment.Center
+        label.backgroundColor = UIColor.clear
+        label.textAlignment = NSTextAlignment.center
         return label
     }()
     //菊花
     fileprivate lazy var activityView: ActivityIndicatorView = {
         let activityView = ActivityIndicatorView()
-        activityView.bounds = CGRect(origin: CGPointZero, size: CGSize(width: 25, height: 25))
+        activityView.bounds = CGRect(origin: CGPoint.zero, size: CGSize(width: 25, height: 25))
         activityView.isHidden = true
         return activityView
     }()
@@ -188,8 +190,8 @@ class PullToRefreshView: UIView{
 
 
 extension PullToRefreshView {
-    override func observeValueForKeyPath(_ keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutableRawPointer) {
-        
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let keyPath = keyPath , keyPath == "contentOffset" {
             // 如果处于刷新状态，直接退出
             guard state != RefreshState.refreshing else {
@@ -207,23 +209,25 @@ extension PullToRefreshView {
             }
             setupHeaderViewAnimation()
             
-            if scrollView.dragging {
-                if fabs(currentOffsetY) > happenOffsetY && self.state == RefreshState.Normal {
+            if scrollView.isDragging {
+                if fabs(currentOffsetY) > happenOffsetY && self.state == RefreshState.normal {
                     state = RefreshState.pulling
-                } else if fabs(currentOffsetY) <= happenOffsetY && self.state == RefreshState.Pulling {
+                } else if fabs(currentOffsetY) <= happenOffsetY && self.state == RefreshState.pulling {
                     state = RefreshState.normal
                 }
             } else if self.state == RefreshState.pulling {
                 state = RefreshState.refreshing
             }
         }
+
     }
+    
     
     fileprivate func setupRedLineAnimation() {
         let width = max(1,(1-progressPercentage)*40)
         let height = max(1,fabs(scrollView.contentOffset.y)-10)
         
-        UIView.animateWithDuration(0.01, animations: {
+        UIView.animate(withDuration: 0.01, animations: {
             self.readLine.frame = CGRect(x: self.center.x-width*0.5, y: 0, width: width, height: height)
         })
     }
@@ -233,13 +237,13 @@ extension PullToRefreshView {
         progressPercentage = min(1, refreshViewVisibleHeight / happenOffsetY)
         headerView.alpha = min(1, max(1-progressPercentage/0.2, 0))
         menuButton.alpha = min(1, max(1-progressPercentage/0.2, 0))
-        if !classifyButton.hidden {
+        if !classifyButton.isHidden {
             classifyButton.alpha = min(1, max(1-progressPercentage/0.2, 0))
         }
     }
     
     fileprivate func setupNormalDataAnimation() {
-        UIView.animateWithDuration(0.1) {
+        UIView.animate(withDuration: 0.1) {
             self.readLine.frame = CGRect(x: self.center.x-20, y: 0, width: 40, height: 1)
             self.headerView.alpha = 1
             self.menuButton.alpha = 1
