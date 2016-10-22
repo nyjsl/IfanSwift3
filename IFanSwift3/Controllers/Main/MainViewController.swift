@@ -94,6 +94,21 @@ class MainViewController: UIViewController{
     fileprivate var statusBarHidden = true
     
     func setUpRootViewControllers(){
+        
+        
+//        newsFlashController.scrollViewReusableDataSource = self
+        homeController.scrollViewReusableDatSource = self
+//        playingzhiController.scrollViewReusableDataSource = self
+//        appsoController.scrollViewReusableDataSource = self
+//        mindStoreController.scrollViewReusableDataSource = self
+        
+//        newsFlashController.scrollViewReusableDelegate = self
+        homeController.scrollViewControllerReusableDelegate = self
+//        playingzhiController.scrollViewReusableDelegate = self
+//        appsoController.scrollViewReusableDelegate = self
+//        mindStoreController.scrollViewReusableDelegate = self
+
+        
         menuController.view.frame = self.view.bounds
         
         self.addChildViewController(menuController)

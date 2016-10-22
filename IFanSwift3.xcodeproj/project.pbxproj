@@ -69,6 +69,10 @@
 		268DB66A1DBA4813006901A1 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB63B1DBA4813006901A1 /* MainHeaderView.swift */; };
 		268DB66B1DBA4813006901A1 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB6421DBA4813006901A1 /* ActivityIndicatorView.swift */; };
 		268DB66C1DBA4813006901A1 /* PulltoRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB6431DBA4813006901A1 /* PulltoRefreshView.swift */; };
+		26F0F1221DBB9A4B00683D32 /* BasePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0F1211DBB9A4B00683D32 /* BasePageController.swift */; };
+		26F0F1241DBBAD8300683D32 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0F1231DBBAD8300683D32 /* HomeHeaderView.swift */; };
+		26F0F1261DBBB20800683D32 /* HomeHeaderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0F1251DBBB20800683D32 /* HomeHeaderItemView.swift */; };
+		26F0F1281DBBB9DC00683D32 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0F1271DBBB9DC00683D32 /* HomePageController.swift */; };
 		D21037A81A4E2728E68E359D /* Pods_IFanSwift3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12ABAB02CB73CF74E5F03E38 /* Pods_IFanSwift3.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +142,10 @@
 		268DB63B1DBA4813006901A1 /* MainHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		268DB6421DBA4813006901A1 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		268DB6431DBA4813006901A1 /* PulltoRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulltoRefreshView.swift; sourceTree = "<group>"; };
+		26F0F1211DBB9A4B00683D32 /* BasePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageController.swift; sourceTree = "<group>"; };
+		26F0F1231DBBAD8300683D32 /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		26F0F1251DBBB20800683D32 /* HomeHeaderItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderItemView.swift; sourceTree = "<group>"; };
+		26F0F1271DBBB9DC00683D32 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		539AFD2A35B8227E08F1065F /* Pods-IFanSwift3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFanSwift3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IFanSwift3/Pods-IFanSwift3.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA846CB62522157981CCCB5 /* Pods-IFanSwift3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFanSwift3.release.xcconfig"; path = "Pods/Target Support Files/Pods-IFanSwift3/Pods-IFanSwift3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -252,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				268DB6031DBA4813006901A1 /* IFBaseNavController.swift */,
+				26F0F1211DBB9A4B00683D32 /* BasePageController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -457,6 +466,9 @@
 				268DB6371DBA4813006901A1 /* HomeLatestImageCell.swift */,
 				268DB6381DBA4813006901A1 /* HomeLatestTextCell.swift */,
 				268DB6391DBA4813006901A1 /* HomePopbarLayout.swift */,
+				26F0F1231DBBAD8300683D32 /* HomeHeaderView.swift */,
+				26F0F1251DBBB20800683D32 /* HomeHeaderItemView.swift */,
+				26F0F1271DBBB9DC00683D32 /* HomePageController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -690,10 +702,12 @@
 				268DB6501DBA4813006901A1 /* MindStoreViewController.swift in Sources */,
 				26850F921DBB2EFA00689FED /* MenuHeaderView.swift in Sources */,
 				268DB65E1DBA4813006901A1 /* CategoryListHeaderView.swift in Sources */,
+				26F0F1241DBBAD8300683D32 /* HomeHeaderView.swift in Sources */,
 				268DB6551DBA4813006901A1 /* CommentModel.swift in Sources */,
 				26850F9C1DBB66C600689FED /* SettingTableModel.swift in Sources */,
 				268DB6491DBA4813006901A1 /* IFBaseNavController.swift in Sources */,
 				268DB6471DBA4813006901A1 /* Constant.swift in Sources */,
+				26F0F1221DBB9A4B00683D32 /* BasePageController.swift in Sources */,
 				268DB6681DBA4813006901A1 /* HomeLatestTextCell.swift in Sources */,
 				268DB64D1DBA4813006901A1 /* HomeViewController.swift in Sources */,
 				268DB5F71DBA47F1006901A1 /* UIImageViewExt.swift in Sources */,
@@ -713,12 +727,14 @@
 				268DB5F01DBA47F1006901A1 /* ControllerReusable.swift in Sources */,
 				26850F9A1DBB5BB700689FED /* SettingHeadView.swift in Sources */,
 				268DB5F51DBA47F1006901A1 /* StringExt.swift in Sources */,
+				26F0F1281DBBB9DC00683D32 /* HomePageController.swift in Sources */,
 				268DB5F11DBA47F1006901A1 /* NSDateExt.swift in Sources */,
 				268DB5F61DBA47F1006901A1 /* UIFont+ifanr.swift in Sources */,
 				268DB6661DBA4813006901A1 /* HomeLatestDateCell.swift in Sources */,
 				268DB5F21DBA47F1006901A1 /* NSMutableAttribtedStringExt.swift in Sources */,
 				268DB6691DBA4813006901A1 /* HomePopbarLayout.swift in Sources */,
 				268DB6511DBA4813006901A1 /* NewFeatureController.swift in Sources */,
+				26F0F1261DBBB20800683D32 /* HomeHeaderItemView.swift in Sources */,
 				268DB66C1DBA4813006901A1 /* PulltoRefreshView.swift in Sources */,
 				268DB6461DBA4813006901A1 /* APIConstant.swift in Sources */,
 				264235B81DB9007A00450E50 /* AppDelegate.swift in Sources */,

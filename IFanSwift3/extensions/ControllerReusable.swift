@@ -41,7 +41,7 @@ protocol ScrollViewControllerReusableDelegate: ControllerReusable {
 
 protocol ScrollViewControllerReusable: ControllerReusable,PullToRefreshDataSource {
    
-    var tablView: UITableView! {get set}
+    var tableView: UITableView! {get set}
     
     var scrollViewReusableDatSource: ScrollViewControllerReusableDataSource!{get set}
     
@@ -71,7 +71,7 @@ extension ScrollViewControllerReusable where Self: UIViewController{
     }
     
     func scrollView() -> UIScrollView {
-        return self.tablView
+        return self.tableView
     }
     
 }
@@ -79,15 +79,15 @@ extension ScrollViewControllerReusable where Self: UIViewController{
 extension ScrollViewControllerReusable where Self: UIViewController{
     
     func setUpTableView(){
-        if tablView == nil{
-            tablView = UITableView()
-            tablView.backgroundColor = UIColor.white
-            tablView.origin = CGPoint.zero
-            tablView.size = CGSize(width: self.view.width, height: self.view.height-UIConstant.UI_MARGIN_20)
-            tablView.separatorStyle = .none
-            tablView.sectionFooterHeight = 50
-            tablView.tableFooterView = pullToRefreshFootView()
-            self.view.addSubview(tablView)
+        if tableView == nil{
+            tableView = UITableView()
+            tableView.backgroundColor = UIColor.white
+            tableView.origin = CGPoint.zero
+            tableView.size = CGSize(width: self.view.width, height: self.view.height-UIConstant.UI_MARGIN_20)
+            tableView.separatorStyle = .none
+            tableView.sectionFooterHeight = 50
+            tableView.tableFooterView = pullToRefreshFootView()
+            self.view.addSubview(tableView)
         }
     }
     
@@ -95,7 +95,7 @@ extension ScrollViewControllerReusable where Self: UIViewController{
         if pullToRefreshView == nil{
             pullToRefreshView = PullToRefreshView(frame: CGRect(x: CGFloat(0), y: -scenceHeight, width: self.view.width, height: scenceHeight))
             pullToRefreshView.dataSource = self
-            self.tablView.insertSubview(pullToRefreshView, at: 0)
+            self.tableView.insertSubview(pullToRefreshView, at: 0)
             
         }
     }
