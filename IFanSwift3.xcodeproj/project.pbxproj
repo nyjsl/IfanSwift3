@@ -11,6 +11,13 @@
 		264235BD1DB9007A00450E50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264235BB1DB9007A00450E50 /* Main.storyboard */; };
 		264235BF1DB9007A00450E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264235BE1DB9007A00450E50 /* Assets.xcassets */; };
 		264235C21DB9007A00450E50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264235C01DB9007A00450E50 /* LaunchScreen.storyboard */; };
+		26850F921DBB2EFA00689FED /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26850F911DBB2EFA00689FED /* MenuHeaderView.swift */; };
+		26850F941DBB520C00689FED /* MenuTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26850F931DBB520C00689FED /* MenuTableModel.swift */; };
+		26850F961DBB553300689FED /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26850F951DBB553300689FED /* MenuTableViewCell.swift */; };
+		26850F981DBB5B1F00689FED /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26850F971DBB5B1F00689FED /* SettingViewController.swift */; };
+		26850F9A1DBB5BB700689FED /* SettingHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26850F991DBB5BB700689FED /* SettingHeadView.swift */; };
+		26850F9C1DBB66C600689FED /* SettingTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26850F9B1DBB66C600689FED /* SettingTableModel.swift */; };
+		26850F9E1DBB684B00689FED /* SettingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26850F9D1DBB684B00689FED /* SettingViewCell.swift */; };
 		268DB5F01DBA47F1006901A1 /* ControllerReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB5E41DBA47F1006901A1 /* ControllerReusable.swift */; };
 		268DB5F11DBA47F1006901A1 /* NSDateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB5E51DBA47F1006901A1 /* NSDateExt.swift */; };
 		268DB5F21DBA47F1006901A1 /* NSMutableAttribtedStringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB5E61DBA47F1006901A1 /* NSMutableAttribtedStringExt.swift */; };
@@ -73,6 +80,13 @@
 		264235BE1DB9007A00450E50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		264235C11DB9007A00450E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		264235C31DB9007A00450E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26850F911DBB2EFA00689FED /* MenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
+		26850F931DBB520C00689FED /* MenuTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableModel.swift; sourceTree = "<group>"; };
+		26850F951DBB553300689FED /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		26850F971DBB5B1F00689FED /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		26850F991DBB5BB700689FED /* SettingHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingHeadView.swift; sourceTree = "<group>"; };
+		26850F9B1DBB66C600689FED /* SettingTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableModel.swift; sourceTree = "<group>"; };
+		26850F9D1DBB684B00689FED /* SettingViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewCell.swift; sourceTree = "<group>"; };
 		268DB5E41DBA47F1006901A1 /* ControllerReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerReusable.swift; sourceTree = "<group>"; };
 		268DB5E51DBA47F1006901A1 /* NSDateExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExt.swift; sourceTree = "<group>"; };
 		268DB5E61DBA47F1006901A1 /* NSMutableAttribtedStringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttribtedStringExt.swift; sourceTree = "<group>"; };
@@ -221,7 +235,7 @@
 				268DB6131DBA4813006901A1 /* NewsFlash */,
 				268DB6151DBA4813006901A1 /* Playingzhi */,
 				268DB6171DBA4813006901A1 /* Search */,
-				268DB6181DBA4813006901A1 /* Searching */,
+				268DB6181DBA4813006901A1 /* Setting */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -322,10 +336,12 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		268DB6181DBA4813006901A1 /* Searching */ = {
+		268DB6181DBA4813006901A1 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				26850F971DBB5B1F00689FED /* SettingViewController.swift */,
 			);
+			name = Setting;
 			path = Searching;
 			sourceTree = "<group>";
 		};
@@ -336,6 +352,8 @@
 				268DB61B1DBA4813006901A1 /* CommentModel.swift */,
 				268DB61C1DBA4813006901A1 /* CommonModel.swift */,
 				268DB61D1DBA4813006901A1 /* Initable.swift */,
+				26850F931DBB520C00689FED /* MenuTableModel.swift */,
+				26850F9B1DBB66C600689FED /* SettingTableModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,7 +409,7 @@
 				268DB6401DBA4813006901A1 /* Playingzhi */,
 				268DB6411DBA4813006901A1 /* PullToRefresh */,
 				268DB6441DBA4813006901A1 /* Search */,
-				268DB6451DBA4813006901A1 /* Searching */,
+				268DB6451DBA4813006901A1 /* Setting */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -454,6 +472,8 @@
 		268DB63C1DBA4813006901A1 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				26850F911DBB2EFA00689FED /* MenuHeaderView.swift */,
+				26850F951DBB553300689FED /* MenuTableViewCell.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -502,10 +522,13 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		268DB6451DBA4813006901A1 /* Searching */ = {
+		268DB6451DBA4813006901A1 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				26850F991DBB5BB700689FED /* SettingHeadView.swift */,
+				26850F9D1DBB684B00689FED /* SettingViewCell.swift */,
 			);
+			name = Setting;
 			path = Searching;
 			sourceTree = "<group>";
 		};
@@ -658,13 +681,17 @@
 				268DB6651DBA4813006901A1 /* ShareView.swift in Sources */,
 				268DB64B1DBA4813006901A1 /* DetailCommentController.swift in Sources */,
 				268DB64E1DBA4813006901A1 /* MainViewController.swift in Sources */,
+				26850F9E1DBB684B00689FED /* SettingViewCell.swift in Sources */,
 				268DB6561DBA4813006901A1 /* CommonModel.swift in Sources */,
 				268DB5FB1DBA47F1006901A1 /* UIViewExt.swift in Sources */,
+				26850F981DBB5B1F00689FED /* SettingViewController.swift in Sources */,
 				268DB5F41DBA47F1006901A1 /* ShareReusable.swift in Sources */,
 				268DB6571DBA4813006901A1 /* Initable.swift in Sources */,
 				268DB6501DBA4813006901A1 /* MindStoreViewController.swift in Sources */,
+				26850F921DBB2EFA00689FED /* MenuHeaderView.swift in Sources */,
 				268DB65E1DBA4813006901A1 /* CategoryListHeaderView.swift in Sources */,
 				268DB6551DBA4813006901A1 /* CommentModel.swift in Sources */,
+				26850F9C1DBB66C600689FED /* SettingTableModel.swift in Sources */,
 				268DB6491DBA4813006901A1 /* IFBaseNavController.swift in Sources */,
 				268DB6471DBA4813006901A1 /* Constant.swift in Sources */,
 				268DB6681DBA4813006901A1 /* HomeLatestTextCell.swift in Sources */,
@@ -678,11 +705,13 @@
 				268DB64C1DBA4813006901A1 /* DetailController.swift in Sources */,
 				268DB6481DBA4813006901A1 /* AppsoViewController.swift in Sources */,
 				268DB5F81DBA47F1006901A1 /* UILabelExt.swift in Sources */,
+				26850F961DBB553300689FED /* MenuTableViewCell.swift in Sources */,
 				268DB6611DBA4813006901A1 /* BottomToolsBar.swift in Sources */,
 				268DB65F1DBA4813006901A1 /* CategoryView.swift in Sources */,
 				268DB6531DBA4813006901A1 /* PlayingzhiViewController.swift in Sources */,
 				268DB5F31DBA47F1006901A1 /* Reuseable.swift in Sources */,
 				268DB5F01DBA47F1006901A1 /* ControllerReusable.swift in Sources */,
+				26850F9A1DBB5BB700689FED /* SettingHeadView.swift in Sources */,
 				268DB5F51DBA47F1006901A1 /* StringExt.swift in Sources */,
 				268DB5F11DBA47F1006901A1 /* NSDateExt.swift in Sources */,
 				268DB5F61DBA47F1006901A1 /* UIFont+ifanr.swift in Sources */,
@@ -701,6 +730,7 @@
 				268DB6521DBA4813006901A1 /* NewsFlashViewController.swift in Sources */,
 				268DB6631DBA4813006901A1 /* CommentTableViewCell.swift in Sources */,
 				268DB64F1DBA4813006901A1 /* MenuViewController.swift in Sources */,
+				26850F941DBB520C00689FED /* MenuTableModel.swift in Sources */,
 				268DB6601DBA4813006901A1 /* CategoryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
