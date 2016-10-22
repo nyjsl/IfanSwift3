@@ -42,13 +42,13 @@ class HomeLatestImageCell: UITableViewCell,Reuseable {
             linkImageView.frame = popularLayout.kHomeCellPicRect
             
             // 设置分类和时间
-            let dateAttributeText = NSMutableAttributedString(string: "\(popularLayout.model.category) | \(Date.getCommonExpresionOfDate(popularLayout.model.pubDate))")
+            let dateAttributeText = NSMutableAttributedString(string: "\(popularLayout.model.category!) | \(Date.getCommonExpresionOfDate(popularLayout.model.pubDate))")
             dateAttributeText.addAttribute(NSForegroundColorAttributeName, value: UIConstant.UI_COLOR_RedTheme, range: NSRange(location: 0, length: 2))
             dateLabel.attributedText = dateAttributeText
             dateLabel.frame = popularLayout.kHomeCellDateRect
             
             // 喜欢数
-            likeLabel.text = "\(popularLayout.model.like)"
+            likeLabel.text = "\(popularLayout.model.like!)"
             likeLabel.frame = popularLayout.kHomeCellLikeRect
             likeImageView.frame = popularLayout.kHomeCellLikeImgRect
             

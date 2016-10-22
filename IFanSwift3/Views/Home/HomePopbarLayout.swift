@@ -86,7 +86,7 @@ struct HomePopbarLayout: Initable{
         self.kHomeCellTextRect = CGRect(x: kHomeCellDateRect.minX, y: kHomeCellTopMargin+kHomeCellDateRect.maxY, width: excerptSize.width, height: excerptSize.height)
         
         // 作者
-        let authorText = "—— \(excerptAndAuthor.first)"
+        let authorText = "—— \(excerptAndAuthor.first!)"
         let authorTextSize = (authorText as NSString).boundingRect(with: CGSize(width: contentWidth, height: 20), options: .usesLineFragmentOrigin, attributes: excerpAttribute, context: nil).size
         self.kHomeCellAuthorRect = CGRect(x: kHomeCellPadding, y: kHomeCellTextRect.maxY+kHomeCellTopMargin, width: contentWidth, height: authorTextSize.height)
         
@@ -167,7 +167,7 @@ struct HomePopbarLayout: Initable{
     }
     
     fileprivate func calculateDateSize() -> CGSize{
-        let dateStr = "\(model.category) | \(Date.getDate(model.pubDate)))"
+        let dateStr = "\(model.category!) | \(Date.getDate(model.pubDate)))"
         let toolbarAttribute = [NSFontAttributeName:UIFont.customFont_FZLTXIHJW(fontSize: 12)]
         return (dateStr as NSString).boundingRect(with: CGSize(width: 200, height: kHomeCellToolBarHeight), options: .usesLineFragmentOrigin, attributes: toolbarAttribute, context: nil).size
 
@@ -178,7 +178,7 @@ struct HomePopbarLayout: Initable{
      */
     fileprivate func calculateLikeSize() -> CGSize {
         let likeAttribute = [NSFontAttributeName: UIFont.customFont_FZLTXIHJW(fontSize: 12)]
-        return ("\(model.like)" as NSString).boundingRect(with: CGSize(width: 100, height: kHomeCellToolBarHeight), options: .usesLineFragmentOrigin, attributes: likeAttribute, context: nil).size
+        return ("\(model.like!)" as NSString).boundingRect(with: CGSize(width: 100, height: kHomeCellToolBarHeight), options: .usesLineFragmentOrigin, attributes: likeAttribute, context: nil).size
     }
 
     

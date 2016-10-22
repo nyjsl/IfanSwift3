@@ -46,18 +46,18 @@ class HomeLatestDateCell: UITableViewCell,Reuseable{
             authorImageView.frame = popularLayout.kHomeCellAuthorImgRect
             
             // 设置分类和时间
-            let dateAttributeText = NSMutableAttributedString(string: "\(popularLayout.model.category) | \(Date.getCommonExpresionOfDate(popularLayout.model.pubDate))")
+            let dateAttributeText = NSMutableAttributedString(string: "\(popularLayout.model.category!) | \(Date.getCommonExpresionOfDate(popularLayout.model.pubDate))")
             dateAttributeText.addAttribute(NSForegroundColorAttributeName, value: UIConstant.UI_COLOR_RedTheme, range: NSRange(location: 0, length: 2))
             dateLabel.attributedText = dateAttributeText
             dateLabel.frame = popularLayout.kHomeCellDateRect
             
             // 喜欢数
-            likeLabel.text = "\(popularLayout.model.like)"
+            likeLabel.text = "\(popularLayout.model.like!)"
             likeLabel.frame = popularLayout.kHomeCellLikeRect
             likeImageView.frame = popularLayout.kHomeCellLikeImgRect
             
             // 数字
-            let numberAttributeText = NSMutableAttributedString(string: "\(popularLayout.model.number)  \(popularLayout.model.subfix)")
+            let numberAttributeText = NSMutableAttributedString(string: "\(popularLayout.model.number!)  \(popularLayout.model.subfix!)")
             numberAttributeText.addAttribute(NSFontAttributeName, value: UIFont.customFont_FZLTZCHJW(fontSize: 40), range: NSRange(location: 0, length: popularLayout.model.number.length))
             numberLabel.attributedText = numberAttributeText
             numberLabel.frame = popularLayout.kHomeCellNumberRect

@@ -37,7 +37,7 @@ class CategoryController: UIViewController {
         self.backBtn.snp.makeConstraints { (make) in
             make.left.equalTo(self.view)
             make.top.equalTo(self.view).offset(UIConstant.UI_MARGIN_20)
-            make.size.equalTo(CGSize(width: 50, height: 50))
+            make.size.equalTo(CGSize(width: 50, height: 15))
         }
         self.titleLabel.snp.makeConstraints { (make) in
             make.left.right.equalTo(self.view)

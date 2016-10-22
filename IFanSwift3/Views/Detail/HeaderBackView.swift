@@ -48,7 +48,7 @@ class HeaderBackView: UIView{
         }
         
         titleLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(self.backButton.snp.right)
+            make.left.equalTo(self.backButton.snp.right).offset(10)
             make.centerY.equalTo(self)
             make.height.equalTo(40)
             make.width.equalTo(100)

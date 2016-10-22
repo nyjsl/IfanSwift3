@@ -27,9 +27,9 @@ class IFanService{
             switch result{
             case let .success(response):
                 do {
-                    let json = try response.mapJSON() as? Dictionary<String,AnyObject>
+                    let json = try response.mapJSON() as? Dictionary<String,Any>
                     if let json = json{
-                        if let content = json["data"] as? Array<AnyObject>{
+                        if let content = json["data"] as? Array<Any>{
                             
                             DispatchQueue.global().async(execute: { 
                                 let layoutArray = content.map({ (dict) -> HomePopbarLayout in
@@ -66,10 +66,10 @@ class IFanService{
             switch result{
             case let .success(response):
                 do{
-                    let json = try response.mapJSON() as? Dictionary<String,AnyObject>
+                    let json = try response.mapJSON() as? Dictionary<String,Any>
                     if let json = json{
                         if keys.count == 1{ //获取data数组
-                            if let content = json[keys[0]] as? Array<AnyObject>{
+                            if let content = json[keys[0]] as? Array<Any>{
                                 
                                 DispatchQueue.global().async {
                                     let modelArray = content.map({ (dict) -> T in
@@ -87,8 +87,8 @@ class IFanService{
                             }
                             
                         }else if keys.count == 2{
-                            if let content = json[keys[0]] as? Dictionary<String,AnyObject>{
-                                if let alls = content[keys[1]] as? Array<AnyObject>{
+                            if let content = json[keys[0]] as? Dictionary<String,Any>{
+                                if let alls = content[keys[1]] as? Array<Any>{
                                     
                                     DispatchQueue.global().async {
                                         let  allsArray = alls.map({ (dict) -> T in

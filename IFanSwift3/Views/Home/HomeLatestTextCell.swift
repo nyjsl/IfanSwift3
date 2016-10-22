@@ -41,13 +41,13 @@ class HomeLatestTextCell: UITableViewCell,Reuseable{
             authorImageView.frame = homePopbarLayout.kHomeCellAuthorImgRect
             //设置分类和时间
             let dateAttributedText = NSMutableAttributedString(string:
-                "\(homePopbarLayout.model.category) | \(Date.getCommonExpresionOfDate(homePopbarLayout.model.pubDate))")
+                "\(homePopbarLayout.model.category!) | \(Date.getCommonExpresionOfDate(homePopbarLayout.model.pubDate))")
             dateAttributedText.addAttribute(NSForegroundColorAttributeName, value: UIConstant.UI_COLOR_RedTheme, range: NSRange(location: 0, length: 2))
             dateLabel.attributedText = dateAttributedText
             dateLabel.frame = homePopbarLayout.kHomeCellDateRect
             
             //喜欢数
-            likeLabel.text = "\(homePopbarLayout.model.like)"
+            likeLabel.text = "\(homePopbarLayout.model.like!)"
             likeLabel.frame = homePopbarLayout.kHomeCellLikeRect
             likeImageView.frame = homePopbarLayout.kHomeCellLikeImgRect
             
@@ -57,7 +57,7 @@ class HomeLatestTextCell: UITableViewCell,Reuseable{
             introduceLabel.frame = homePopbarLayout.kHomeCellTextRect
             
             // 作者
-            authorLabel.text = "—— \(homePopbarLayout.model.dasheng_author)"
+            authorLabel.text = "—— \(homePopbarLayout.model.dasheng_author!)"
             authorLabel.frame = homePopbarLayout.kHomeCellAuthorRect
             // 底部横线
             bottomLayer.frame = CGRect(x: UIConstant.UI_MARGIN_20, y: homePopbarLayout.cellHeight-1, width: self.width-2*UIConstant.UI_MARGIN_20, height: 1)
