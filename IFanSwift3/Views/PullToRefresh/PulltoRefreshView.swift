@@ -163,6 +163,13 @@ class PullToRefreshView: UIView{
                         }, completion: { (_) in
                             self.readLine.frame = CGRect(x: self.center.x, y: 0, width: 0, height: 1)
                     })
+                    
+                    //执行block
+                    let time = DispatchTime.now() + Double(Int64(1.5 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+                    DispatchQueue.main.asyncAfter(deadline: time, execute: {
+                        delegate.pullToRefreshViewDidRefresh(self)
+                    })
+
                 }
             }
         }
