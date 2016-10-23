@@ -69,6 +69,9 @@
 		268DB66A1DBA4813006901A1 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB63B1DBA4813006901A1 /* MainHeaderView.swift */; };
 		268DB66B1DBA4813006901A1 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB6421DBA4813006901A1 /* ActivityIndicatorView.swift */; };
 		268DB66C1DBA4813006901A1 /* PulltoRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB6431DBA4813006901A1 /* PulltoRefreshView.swift */; };
+		26DEDE8F1DBCEC32005F213A /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEDE8E1DBCEC32005F213A /* TableHeaderView.swift */; };
+		26DEDE911DBCEC9B005F213A /* TableHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEDE901DBCEC9B005F213A /* TableHeaderModel.swift */; };
+		26DEDE931DBCF9D3005F213A /* NewsFlashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEDE921DBCF9D3005F213A /* NewsFlashTableViewCell.swift */; };
 		26F0F1221DBB9A4B00683D32 /* BasePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0F1211DBB9A4B00683D32 /* BasePageController.swift */; };
 		26F0F1241DBBAD8300683D32 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0F1231DBBAD8300683D32 /* HomeHeaderView.swift */; };
 		26F0F1261DBBB20800683D32 /* HomeHeaderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0F1251DBBB20800683D32 /* HomeHeaderItemView.swift */; };
@@ -142,6 +145,9 @@
 		268DB63B1DBA4813006901A1 /* MainHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		268DB6421DBA4813006901A1 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		268DB6431DBA4813006901A1 /* PulltoRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulltoRefreshView.swift; sourceTree = "<group>"; };
+		26DEDE8E1DBCEC32005F213A /* TableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
+		26DEDE901DBCEC9B005F213A /* TableHeaderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderModel.swift; sourceTree = "<group>"; };
+		26DEDE921DBCF9D3005F213A /* NewsFlashTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFlashTableViewCell.swift; sourceTree = "<group>"; };
 		26F0F1211DBB9A4B00683D32 /* BasePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageController.swift; sourceTree = "<group>"; };
 		26F0F1231DBBAD8300683D32 /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		26F0F1251DBBB20800683D32 /* HomeHeaderItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderItemView.swift; sourceTree = "<group>"; };
@@ -363,6 +369,7 @@
 				268DB61D1DBA4813006901A1 /* Initable.swift */,
 				26850F931DBB520C00689FED /* MenuTableModel.swift */,
 				26850F9B1DBB66C600689FED /* SettingTableModel.swift */,
+				26DEDE901DBCEC9B005F213A /* TableHeaderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -477,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				268DB63B1DBA4813006901A1 /* MainHeaderView.swift */,
+				26DEDE8E1DBCEC32005F213A /* TableHeaderView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -507,6 +515,7 @@
 		268DB63F1DBA4813006901A1 /* NewsFlash */ = {
 			isa = PBXGroup;
 			children = (
+				26DEDE921DBCF9D3005F213A /* NewsFlashTableViewCell.swift */,
 			);
 			path = NewsFlash;
 			sourceTree = "<group>";
@@ -701,6 +710,7 @@
 				268DB6571DBA4813006901A1 /* Initable.swift in Sources */,
 				268DB6501DBA4813006901A1 /* MindStoreViewController.swift in Sources */,
 				26850F921DBB2EFA00689FED /* MenuHeaderView.swift in Sources */,
+				26DEDE911DBCEC9B005F213A /* TableHeaderModel.swift in Sources */,
 				268DB65E1DBA4813006901A1 /* CategoryListHeaderView.swift in Sources */,
 				26F0F1241DBBAD8300683D32 /* HomeHeaderView.swift in Sources */,
 				268DB6551DBA4813006901A1 /* CommentModel.swift in Sources */,
@@ -720,6 +730,7 @@
 				268DB6481DBA4813006901A1 /* AppsoViewController.swift in Sources */,
 				268DB5F81DBA47F1006901A1 /* UILabelExt.swift in Sources */,
 				26850F961DBB553300689FED /* MenuTableViewCell.swift in Sources */,
+				26DEDE8F1DBCEC32005F213A /* TableHeaderView.swift in Sources */,
 				268DB6611DBA4813006901A1 /* BottomToolsBar.swift in Sources */,
 				268DB65F1DBA4813006901A1 /* CategoryView.swift in Sources */,
 				268DB6531DBA4813006901A1 /* PlayingzhiViewController.swift in Sources */,
@@ -735,6 +746,7 @@
 				268DB6691DBA4813006901A1 /* HomePopbarLayout.swift in Sources */,
 				268DB6511DBA4813006901A1 /* NewFeatureController.swift in Sources */,
 				26F0F1261DBBB20800683D32 /* HomeHeaderItemView.swift in Sources */,
+				26DEDE931DBCF9D3005F213A /* NewsFlashTableViewCell.swift in Sources */,
 				268DB66C1DBA4813006901A1 /* PulltoRefreshView.swift in Sources */,
 				268DB6461DBA4813006901A1 /* APIConstant.swift in Sources */,
 				264235B81DB9007A00450E50 /* AppDelegate.swift in Sources */,
