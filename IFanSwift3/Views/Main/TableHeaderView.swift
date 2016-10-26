@@ -26,7 +26,7 @@ class TableHeaderView: UIView{
     }
     
     convenience init(model: TableHeaderModel) {
-        self.init(frame:CGRect(x: 0, y: 0, width: UIConstant.SCREEN_WIDTH, height: 80 * UIConstant.SCREEN_HEIGHT / UIConstant.IPHONE5_HEIGHT))
+        self.init(frame:CGRect(x: 0, y: 0, width: UIConstant.SCREEN_WIDTH, height: 100 * UIConstant.SCREEN_HEIGHT / UIConstant.IPHONE5_HEIGHT))
         self.backgroundImage.image = model.backImage
         self.titleLabel.text = model.title
         self.detailTitleLabel.text = model.detail
@@ -35,9 +35,9 @@ class TableHeaderView: UIView{
     }
     
     fileprivate lazy var backgroundImage: UIImageView = {
-        let backgroundImg: UIImageView = UIImageView(frame: CGRect(x: 0, y: -1, width: self.width, height: 120 * UIConstant.SCREEN_HEIGHT/UIConstant.IPHONE5_HEIGHT))
+        let backgroundImg: UIImageView = UIImageView(frame: CGRect(x: 0, y: -1, width: self.width, height: 80 * UIConstant.SCREEN_HEIGHT/UIConstant.IPHONE5_HEIGHT))
         backgroundImg.backgroundColor = UIColor.black
-        backgroundImg.contentMode = .scaleAspectFit
+        backgroundImg.contentMode = .scaleAspectFill
         return backgroundImg
     }()
     
@@ -59,7 +59,7 @@ class TableHeaderView: UIView{
     
     /// 底部图片
     fileprivate lazy var tagImageView: UIImageView = {
-        let tagImageView = UIImageView(frame: CGRect(x: 0, y: self.backgroundImage.bottom + UIConstant.UI_MARGIN_20, width: UIConstant.SCREEN_WIDTH, height: 25))
+        let tagImageView = UIImageView(frame: CGRect(x: 0, y: self.backgroundImage.bottom - 5, width: UIConstant.SCREEN_WIDTH, height: 25))
         
         tagImageView.contentMode = UIViewContentMode.scaleAspectFit
         return tagImageView

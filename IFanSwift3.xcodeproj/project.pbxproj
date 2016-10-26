@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26249A281DC0E8EC00823A75 /* AppsoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26249A271DC0E8EC00823A75 /* AppsoTableViewCell.swift */; };
+		26249A2A1DC0F0E900823A75 /* MindStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26249A291DC0F0E900823A75 /* MindStoreModel.swift */; };
+		26249A2C1DC0F75E00823A75 /* MindStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26249A2B1DC0F75E00823A75 /* MindStoreTableViewCell.swift */; };
 		264235B81DB9007A00450E50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264235B71DB9007A00450E50 /* AppDelegate.swift */; };
 		264235BD1DB9007A00450E50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264235BB1DB9007A00450E50 /* Main.storyboard */; };
 		264235BF1DB9007A00450E50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264235BE1DB9007A00450E50 /* Assets.xcassets */; };
@@ -69,6 +72,7 @@
 		268DB66A1DBA4813006901A1 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB63B1DBA4813006901A1 /* MainHeaderView.swift */; };
 		268DB66B1DBA4813006901A1 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB6421DBA4813006901A1 /* ActivityIndicatorView.swift */; };
 		268DB66C1DBA4813006901A1 /* PulltoRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB6431DBA4813006901A1 /* PulltoRefreshView.swift */; };
+		26C995981DC0D0EB008FC066 /* PlayingZhiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C995971DC0D0EB008FC066 /* PlayingZhiTableViewCell.swift */; };
 		26DEDE8F1DBCEC32005F213A /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEDE8E1DBCEC32005F213A /* TableHeaderView.swift */; };
 		26DEDE911DBCEC9B005F213A /* TableHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEDE901DBCEC9B005F213A /* TableHeaderModel.swift */; };
 		26DEDE931DBCF9D3005F213A /* NewsFlashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEDE921DBCF9D3005F213A /* NewsFlashTableViewCell.swift */; };
@@ -82,6 +86,10 @@
 
 /* Begin PBXFileReference section */
 		12ABAB02CB73CF74E5F03E38 /* Pods_IFanSwift3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IFanSwift3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26249A261DC0DDD200823A75 /* IfanSwfit3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IfanSwfit3-Bridging-Header.h"; sourceTree = "<group>"; };
+		26249A271DC0E8EC00823A75 /* AppsoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsoTableViewCell.swift; sourceTree = "<group>"; };
+		26249A291DC0F0E900823A75 /* MindStoreModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MindStoreModel.swift; sourceTree = "<group>"; };
+		26249A2B1DC0F75E00823A75 /* MindStoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MindStoreTableViewCell.swift; sourceTree = "<group>"; };
 		264235B41DB9007A00450E50 /* IFanSwift3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IFanSwift3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		264235B71DB9007A00450E50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		264235BC1DB9007A00450E50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +154,7 @@
 		268DB63B1DBA4813006901A1 /* MainHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		268DB6421DBA4813006901A1 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		268DB6431DBA4813006901A1 /* PulltoRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulltoRefreshView.swift; sourceTree = "<group>"; };
+		26C995971DC0D0EB008FC066 /* PlayingZhiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingZhiTableViewCell.swift; sourceTree = "<group>"; };
 		26DEDE8E1DBCEC32005F213A /* TableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
 		26DEDE901DBCEC9B005F213A /* TableHeaderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderModel.swift; sourceTree = "<group>"; };
 		26DEDE921DBCF9D3005F213A /* NewsFlashTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFlashTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,6 +213,7 @@
 				264235BE1DB9007A00450E50 /* Assets.xcassets */,
 				264235C01DB9007A00450E50 /* LaunchScreen.storyboard */,
 				264235C31DB9007A00450E50 /* Info.plist */,
+				26249A261DC0DDD200823A75 /* IfanSwfit3-Bridging-Header.h */,
 			);
 			path = IFanSwift3;
 			sourceTree = "<group>";
@@ -373,6 +383,7 @@
 				26850F931DBB520C00689FED /* MenuTableModel.swift */,
 				26850F9B1DBB66C600689FED /* SettingTableModel.swift */,
 				26DEDE901DBCEC9B005F213A /* TableHeaderModel.swift */,
+				26249A291DC0F0E900823A75 /* MindStoreModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -436,6 +447,7 @@
 		268DB6291DBA4813006901A1 /* Appso */ = {
 			isa = PBXGroup;
 			children = (
+				26249A271DC0E8EC00823A75 /* AppsoTableViewCell.swift */,
 			);
 			path = Appso;
 			sourceTree = "<group>";
@@ -504,6 +516,7 @@
 		268DB63D1DBA4813006901A1 /* MinStore */ = {
 			isa = PBXGroup;
 			children = (
+				26249A2B1DC0F75E00823A75 /* MindStoreTableViewCell.swift */,
 			);
 			path = MinStore;
 			sourceTree = "<group>";
@@ -526,6 +539,7 @@
 		268DB6401DBA4813006901A1 /* Playingzhi */ = {
 			isa = PBXGroup;
 			children = (
+				26C995971DC0D0EB008FC066 /* PlayingZhiTableViewCell.swift */,
 			);
 			path = Playingzhi;
 			sourceTree = "<group>";
@@ -717,6 +731,7 @@
 				268DB65E1DBA4813006901A1 /* CategoryListHeaderView.swift in Sources */,
 				26F0F1241DBBAD8300683D32 /* HomeHeaderView.swift in Sources */,
 				268DB6551DBA4813006901A1 /* CommentModel.swift in Sources */,
+				26C995981DC0D0EB008FC066 /* PlayingZhiTableViewCell.swift in Sources */,
 				26850F9C1DBB66C600689FED /* SettingTableModel.swift in Sources */,
 				268DB6491DBA4813006901A1 /* IFBaseNavController.swift in Sources */,
 				268DB6471DBA4813006901A1 /* Constant.swift in Sources */,
@@ -758,12 +773,15 @@
 				268DB64A1DBA4813006901A1 /* CategoryController.swift in Sources */,
 				268DB6541DBA4813006901A1 /* CategoryModel.swift in Sources */,
 				268DB6641DBA4813006901A1 /* HeaderBackView.swift in Sources */,
+				26249A2A1DC0F0E900823A75 /* MindStoreModel.swift in Sources */,
+				26249A281DC0E8EC00823A75 /* AppsoTableViewCell.swift in Sources */,
 				268DB66A1DBA4813006901A1 /* MainHeaderView.swift in Sources */,
 				268DB6521DBA4813006901A1 /* NewsFlashViewController.swift in Sources */,
 				268DB6631DBA4813006901A1 /* CommentTableViewCell.swift in Sources */,
 				268DB64F1DBA4813006901A1 /* MenuViewController.swift in Sources */,
 				26850F941DBB520C00689FED /* MenuTableModel.swift in Sources */,
 				268DB6601DBA4813006901A1 /* CategoryViewCell.swift in Sources */,
+				26249A2C1DC0F75E00823A75 /* MindStoreTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,6 +853,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/weixing/IOSWorkSpace/Projects/IFanSwift3/IFanSwift3/IfanSwfit3-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -878,6 +897,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/weixing/IOSWorkSpace/Projects/IFanSwift3/IFanSwift3/IfanSwfit3-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

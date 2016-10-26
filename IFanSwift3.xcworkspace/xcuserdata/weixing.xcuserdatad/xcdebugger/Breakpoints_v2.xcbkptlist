@@ -6,65 +6,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IFanSwift3/Constants/APIConstant.swift"
-            timestampString = "498756098.000026"
+            filePath = "IFanSwift3/Controllers/NewsFlash/NewsFlashViewController.swift"
+            timestampString = "499180332.449975"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
-            landmarkName = "getParameters(_:)"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IFanSwift3/Views/Menu/MenuHeaderView.swift"
-            timestampString = "498807327.525727"
+            filePath = "IFanSwift3/Services/IFanService.swift"
+            timestampString = "499180381.875567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "searchBtn"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IFanSwift3/Controllers/Home/HomeViewController.swift"
-            timestampString = "498850209.107061"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "getNormalData()"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "getData(_:t:keys:successHandle:errorHandle:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IFanSwift3/Controllers/Home/HomeViewController.swift"
-            timestampString = "498885164.476992"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "pullToRefreshViewDidRefresh(_:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IFanSwift3.IFanService.(getData &lt;A where A: IFanSwift3.Initable&gt; (IFanSwift3.APIConstant, t : Swift.Optional&lt;A&gt;, keys : Swift.Array&lt;Swift.String&gt;, successHandle : Swift.Optional&lt;(Swift.Array&lt;A&gt;) -&gt; ()&gt;, errorHandle : Swift.Optional&lt;(Swift.Error) -&gt; ()&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "IFanSwift3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/weixing/IOSWorkSpace/Projects/IFanSwift3/IFanSwift3/Services/IFanService.swift"
+                  timestampString = "499180381.880651"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "2694">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IFanSwift3.IFanService.(getData &lt;A where A: IFanSwift3.Initable&gt; (IFanSwift3.APIConstant, t : Swift.Optional&lt;A&gt;, keys : Swift.Array&lt;Swift.String&gt;, successHandle : Swift.Optional&lt;(Swift.Array&lt;A&gt;) -&gt; ()&gt;, errorHandle : Swift.Optional&lt;(Swift.Error) -&gt; ()&gt;) -&gt; ()).(closure #1).(closure #2)"
+                  moduleName = "IFanSwift3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/weixing/IOSWorkSpace/Projects/IFanSwift3/IFanSwift3/Services/IFanService.swift"
+                  timestampString = "499180381.883737"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "65">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

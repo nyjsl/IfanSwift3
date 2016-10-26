@@ -41,7 +41,7 @@ extension Date{
         
         let timeIntervalHour = (-1*getTimeIntervalFromNow(dateStr))/60/60
         if timeIntervalHour<1{
-            resultStr = "\(timeIntervalHour*60)分钟前"
+            resultStr = "\(Int(timeIntervalHour*60))分钟前"
         }else if timeIntervalHour<24{
             resultStr = "\(Int(timeIntervalHour))小时前"
         }else if timeIntervalHour<48{

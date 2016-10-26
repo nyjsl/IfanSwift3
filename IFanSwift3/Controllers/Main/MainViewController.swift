@@ -99,14 +99,14 @@ class MainViewController: UIViewController{
         newsFlashController.scrollViewReusableDatSource = self
         homeController.scrollViewReusableDatSource = self
         playingzhiController.scrollViewReusableDatSource = self
-//        appsoController.scrollViewReusableDataSource = self
-//        mindStoreController.scrollViewReusableDataSource = self
+        appsoController.scrollViewReusableDatSource = self
+        mindStoreController.scrollViewReusableDatSource = self
         
         newsFlashController.scrollViewControllerReusableDelegate = self
         homeController.scrollViewControllerReusableDelegate = self
         playingzhiController.scrollViewControllerReusableDelegate = self
-//        appsoController.scrollViewReusableDelegate = self
-//        mindStoreController.scrollViewReusableDelegate = self
+        appsoController.scrollViewControllerReusableDelegate = self
+        mindStoreController.scrollViewControllerReusableDelegate = self
 
         
         menuController.view.frame = self.view.bounds

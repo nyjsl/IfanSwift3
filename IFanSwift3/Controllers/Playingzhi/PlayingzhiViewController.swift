@@ -18,6 +18,8 @@ class PlayingzhiViewController: BasePageController {
         tableView.tableHeaderView = tableHeaderView
         tableView.sectionHeaderHeight = tableHeaderView.height
         pullToRefreshView.delegate = self
+        
+        getData()
     }
     
     fileprivate var playzhiModelArray: Array<CommonModel> = Array<CommonModel>()
@@ -77,14 +79,22 @@ extension PlayingzhiViewController: UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = PlayingZhiTableViewCell.cellViewTableView(tableView: tableView)
+        cell.model = playzhiModelArray[indexPath.row]
+        cell.layoutMargins = UIEdgeInsetsMake(0, 32, 0, 0)
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO
+        
+        let model = self.playzhiModelArray[indexPath.row]
+        let detailController = DetailController(model: model, navTitle: "玩物志")
+        self.navigationController?.pushViewController(detailController, animated: true)
+        
     }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        <#code#>
+        return PlayingZhiTableViewCell.estimateCellHeight(self.playzhiModelArray[indexPath.row].title!) + 20
     }
 }
