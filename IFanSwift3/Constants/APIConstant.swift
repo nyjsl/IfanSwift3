@@ -250,7 +250,7 @@ extension APIConstant: TargetType{
     }
     
     fileprivate func getParameters(_ page: Int) -> [String:Any]?{
-        return ["action":action as Any,"appkey":appKey as Any,"excerpt_length":excerpt_length as Any,"sign":sign as AnyObject,"timestamp":timeStamp as Any,
+        return ["action":action as Any,"appkey":appKey as Any,"excerpt_length":excerpt_length as Any,"sign":sign as Any,"timestamp":timeStamp as Any,
             "page":page as Any,"posts_per_page":posts_per_page as Any,"post_type":post_type as Any]
     }
     

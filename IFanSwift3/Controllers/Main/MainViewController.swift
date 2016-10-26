@@ -96,15 +96,15 @@ class MainViewController: UIViewController{
     func setUpRootViewControllers(){
         
         
-//        newsFlashController.scrollViewReusableDataSource = self
+        newsFlashController.scrollViewReusableDatSource = self
         homeController.scrollViewReusableDatSource = self
-//        playingzhiController.scrollViewReusableDataSource = self
+        playingzhiController.scrollViewReusableDatSource = self
 //        appsoController.scrollViewReusableDataSource = self
 //        mindStoreController.scrollViewReusableDataSource = self
         
-//        newsFlashController.scrollViewReusableDelegate = self
+        newsFlashController.scrollViewControllerReusableDelegate = self
         homeController.scrollViewControllerReusableDelegate = self
-//        playingzhiController.scrollViewReusableDelegate = self
+        playingzhiController.scrollViewControllerReusableDelegate = self
 //        appsoController.scrollViewReusableDelegate = self
 //        mindStoreController.scrollViewReusableDelegate = self
 

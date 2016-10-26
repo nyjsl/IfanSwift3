@@ -22,12 +22,12 @@ extension ShareReusable where Self: UIViewController{
     func hideShareView(){
         
         UIView.animate(withDuration: 0.3, animations: {
-            self.shadowView?.alpha = 0
-            self.shareView?.center.y += 170
+            self.shadowView!.alpha = 0
+            self.shareView!.center.y += 170
             }) { (result) in
                 if result{
-                    self.shadowView?.removeFromSuperview()
-                    self.shareView?.removeFromSuperview()
+                    self.shadowView!.removeFromSuperview()
+                    self.shareView!.removeFromSuperview()
                 }
         }
         
@@ -40,16 +40,16 @@ extension ShareReusable where Self: UIViewController{
         self.shareView!.delegate = self
         
         self.shadowView = UIView(frame: self.view.frame)
-        self.shadowView?.alpha = 0
-        self.shadowView?.backgroundColor = UIColor.black
+        self.shadowView!.alpha = 0
+        self.shadowView!.backgroundColor = UIColor.black
         
         let window: UIWindow = UIApplication.shared.keyWindow!
         window.addSubview(shareView!)
         window.addSubview(shadowView!)
         
         UIView.animate(withDuration: 0.3) { 
-            self.shadowView?.alpha = 0.5
-            self.shareView?.center.y -= 170
+            self.shadowView!.alpha = 0.5
+            self.shareView!.center.y -= 170
 
         }
         
