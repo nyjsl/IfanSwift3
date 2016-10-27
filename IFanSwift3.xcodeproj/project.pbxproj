@@ -72,6 +72,8 @@
 		268DB66A1DBA4813006901A1 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB63B1DBA4813006901A1 /* MainHeaderView.swift */; };
 		268DB66B1DBA4813006901A1 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB6421DBA4813006901A1 /* ActivityIndicatorView.swift */; };
 		268DB66C1DBA4813006901A1 /* PulltoRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268DB6431DBA4813006901A1 /* PulltoRefreshView.swift */; };
+		26BA19751DC2087F00528FCC /* MindStoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA19741DC2087F00528FCC /* MindStoreDetailViewController.swift */; };
+		26BA19771DC20B6400528FCC /* MindStoreVoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BA19761DC20B6400528FCC /* MindStoreVoteModel.swift */; };
 		26C995981DC0D0EB008FC066 /* PlayingZhiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C995971DC0D0EB008FC066 /* PlayingZhiTableViewCell.swift */; };
 		26DEDE8F1DBCEC32005F213A /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEDE8E1DBCEC32005F213A /* TableHeaderView.swift */; };
 		26DEDE911DBCEC9B005F213A /* TableHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEDE901DBCEC9B005F213A /* TableHeaderModel.swift */; };
@@ -154,6 +156,8 @@
 		268DB63B1DBA4813006901A1 /* MainHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		268DB6421DBA4813006901A1 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		268DB6431DBA4813006901A1 /* PulltoRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulltoRefreshView.swift; sourceTree = "<group>"; };
+		26BA19741DC2087F00528FCC /* MindStoreDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MindStoreDetailViewController.swift; sourceTree = "<group>"; };
+		26BA19761DC20B6400528FCC /* MindStoreVoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MindStoreVoteModel.swift; sourceTree = "<group>"; };
 		26C995971DC0D0EB008FC066 /* PlayingZhiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingZhiTableViewCell.swift; sourceTree = "<group>"; };
 		26DEDE8E1DBCEC32005F213A /* TableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
 		26DEDE901DBCEC9B005F213A /* TableHeaderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderModel.swift; sourceTree = "<group>"; };
@@ -329,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				268DB6101DBA4813006901A1 /* MindStoreViewController.swift */,
+				26BA19741DC2087F00528FCC /* MindStoreDetailViewController.swift */,
 			);
 			path = MinStore;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				26850F9B1DBB66C600689FED /* SettingTableModel.swift */,
 				26DEDE901DBCEC9B005F213A /* TableHeaderModel.swift */,
 				26249A291DC0F0E900823A75 /* MindStoreModel.swift */,
+				26BA19761DC20B6400528FCC /* MindStoreVoteModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -759,11 +765,13 @@
 				26F0F1281DBBB9DC00683D32 /* HomePageController.swift in Sources */,
 				268DB5F11DBA47F1006901A1 /* NSDateExt.swift in Sources */,
 				26F6591D1DBF00C5000A1CFC /* SafariController.swift in Sources */,
+				26BA19771DC20B6400528FCC /* MindStoreVoteModel.swift in Sources */,
 				268DB5F61DBA47F1006901A1 /* UIFont+ifanr.swift in Sources */,
 				268DB6661DBA4813006901A1 /* HomeLatestDateCell.swift in Sources */,
 				268DB5F21DBA47F1006901A1 /* NSMutableAttribtedStringExt.swift in Sources */,
 				268DB6691DBA4813006901A1 /* HomePopbarLayout.swift in Sources */,
 				268DB6511DBA4813006901A1 /* NewFeatureController.swift in Sources */,
+				26BA19751DC2087F00528FCC /* MindStoreDetailViewController.swift in Sources */,
 				26F0F1261DBBB20800683D32 /* HomeHeaderItemView.swift in Sources */,
 				26DEDE931DBCF9D3005F213A /* NewsFlashTableViewCell.swift in Sources */,
 				268DB66C1DBA4813006901A1 /* PulltoRefreshView.swift in Sources */,

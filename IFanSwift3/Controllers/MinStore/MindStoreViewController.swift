@@ -96,7 +96,7 @@ extension MindStoreViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.navigationController?.pushViewController(MindStoreDetailController(headerModel: self.mindStoreModelArray[(indexPath as NSIndexPath).row]), animated: true)
+        self.navigationController?.pushViewController(MindStoreDetailViewController(headerModel: self.mindStoreModelArray[(indexPath as NSIndexPath).row]), animated: true)
     }
 }
 
